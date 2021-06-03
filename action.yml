@@ -18,15 +18,11 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
-    # Install the node modules
     - name: Install Expect
       run: sudo apt-get install -y expect tcl-expect
       shell: bash
     - id: after-begin-echo
       run: echo After install ${{ inputs.who-to-greet }}.
-      shell: bash
-    - name: check which version
-      run: which express
       shell: bash
     - id: after-which
       run: echo After Which ${{ inputs.who-to-greet }}.

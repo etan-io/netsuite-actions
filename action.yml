@@ -17,5 +17,8 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
+    # Install the node modules
+    - name: Install Expect
+      run: sudo apt-get install -y expect
     - run: ${{ github.action_path }}/account-setup.exp
       shell: bash

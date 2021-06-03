@@ -4,8 +4,6 @@ exp_internal 1
 
 set timeout -1
 
-echo "in account:setup"
-
 spawn  suitecloud account:setup
 
 expect "Create a new authentication ID (authID)."

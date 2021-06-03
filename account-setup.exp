@@ -6,8 +6,8 @@ set timeout 600
 
 spawn  suitecloud account:setup
 
-expect "*Create a new authentication ID (authID).*"
-send -- "\r\n"
+# expect "*Create a new authentication ID (authID).*"
+# send -- "\r\n"
 
 expect "*Browser-based authentication*"
 send -- "\[B"

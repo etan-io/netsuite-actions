@@ -32,4 +32,4 @@ runs:
       shell: bash
 
     - run: ${{ github.action_path }}/account-setup.exp
-      shell: bash
+      shell: expect

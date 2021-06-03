@@ -21,5 +21,8 @@ runs:
     - name: Install Expect
       run: sudo apt-get install -y expect
       shell: bash
+    -id: check
+      run: which express
+      shell: bash
     - run: ${{ github.action_path }}/account-setup.exp
-      shell: express
+      shell: bash

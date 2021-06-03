@@ -31,5 +31,5 @@ runs:
       run: echo '###  SDF installed'.
       shell: bash
 
-    - run: ${{ github.action_path }}/account-setup.exp
-      shell: expect
+    - run: expect ${{ github.action_path }}/account-setup.exp
+      shell: bash

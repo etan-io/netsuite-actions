@@ -2,7 +2,7 @@
 
 exp_internal 1
 
-set timeout -1
+set timeout 3000
 
 spawn  suitecloud account:setup
 
@@ -30,6 +30,8 @@ send -- "\r\n"
 expect "*Enter the Token Secret:*"
 send -- "1234567890"
 send -- "\r\n"
+
+interact
 
 #puts "The output is '$expect_out(buffer)'."
 expect eof

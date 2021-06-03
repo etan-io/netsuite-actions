@@ -28,5 +28,8 @@ runs:
     - name: check which version
       run: which express
       shell: bash
+    - id: after-which
+      run: echo After Which ${{ inputs.who-to-greet }}.
+      shell: bash
     - run: ${{ github.action_path }}/account-setup.exp
       shell: bash

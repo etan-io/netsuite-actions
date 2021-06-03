@@ -6,7 +6,7 @@ set timeout -1
 
 spawn  suitecloud account:setup
 
-expect "Create a new authentication ID (authID)."
+expect "*Create a new authentication ID (authID).*"
 send -- "\r\n"
 
 expect "*Browser-based authentication*"
@@ -14,20 +14,20 @@ send -- "\[B"
 send -- "\r\n"
 
 
-expect "Enter an authentication ID (authID):"
+expect "*Enter an authentication ID (authID):*"
 send -- "FekadTest"
 send -- "\r\n"
 
 
-expect "Enter the account ID:"
+expect "*Enter the account ID:*"
 send -- "12345"
 send -- "\r\n"
 
-expect "Enter the Token ID:"
+expect "*Enter the Token ID:*"
 send -- "1234567890"
 send -- "\r\n"
 
-expect "Enter the Token Secret:"
+expect "*Enter the Token Secret:*"
 send -- "1234567890"
 send -- "\r\n"
 

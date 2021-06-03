@@ -33,7 +33,7 @@ send -- "\r\n"
 
 #interact
 
-#puts "The output is '$expect_out(buffer)'."
+#puts "The output is '$expect_out(buffer)'. " 
 expect eof
 
 

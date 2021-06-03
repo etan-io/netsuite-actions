@@ -1,4 +1,4 @@
-name: 'Hello World'
+name: 'NetSuite:SDF'
 description: 'Greet someone'
 inputs:
   who-to-greet:  # id of input

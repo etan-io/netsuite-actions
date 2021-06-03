@@ -1,1 +1,0 @@
-echo "in account:setup"

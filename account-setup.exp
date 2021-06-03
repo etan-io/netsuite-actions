@@ -31,7 +31,7 @@ expect "*Enter the Token Secret:*"
 send -- "1234567890"
 send -- "\r\n"
 
-puts "The output is '$expect_out(buffer)'."
+#puts "The output is '$expect_out(buffer)'."
 expect eof
 
 

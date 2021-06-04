@@ -20,23 +20,23 @@ runs:
       shell: bash
 
 
-    - name: Install Node JS
-      run: sudo apt install nodejs
-      shell: bash
-    - id: after-node-install
-      run: echo '### Node installed'.
-      shell: bash
+    # - name: Install Node JS
+    #   run: sudo apt install nodejs
+    #   shell: bash
+    # - id: after-node-install
+    #   run: echo '### Node installed'.
+    #   shell: bash
 
-    - name: Install Node JS
-      run: sudo apt install npm
-      shell: bash
-    - id: after-npm-install
-      run: echo '### NPM installed'.
-      shell: bash
+    # - name: Install Node JS
+    #   run: sudo apt install npm
+    #   shell: bash
+    # - id: after-npm-install
+    #   run: echo '### NPM installed'.
+    #   shell: bash
 
 
     - name: SuiteCloud API Install
-      run: sudo npm install @oracle/suitecloud-cli
+      run: npm install -g @oracle/suitecloud-cli
       shell: bash
     - id: after-sdf-install
       run: echo '### SDF installed'.

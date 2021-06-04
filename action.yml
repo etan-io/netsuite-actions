@@ -62,7 +62,15 @@ runs:
     # - run: ls -trla
     #   shell: bash
 
-    - run: echo ${{ inputs.account }}
+    - run: echo ${{ inputs.action }}
+      shell: bash
+
+
+    - run: if [ ${{ inputs.action }} == 'deploy']; then echo "############ Action is Deploy;" fi
+      shell: bash
+
+
+    - run: if [ ${{ inputs.action }} == 'validate']; then echo "############ Action is Validate;" fi
       shell: bash
 
     - run: suitecloud project:validate

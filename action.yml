@@ -13,6 +13,10 @@ inputs:
     description: 'Token Secret for authentication'
     required: true
     default: 'World'
+  secret:  # id of input
+    description: 'Connection Name'
+    required: false
+    default: "NS-Auth-$(echo $RANDOM)"
 outputs:
   random-number:
     description: "Random number"

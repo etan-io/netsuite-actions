@@ -4,7 +4,7 @@ set NS_ACCOUNT [lindex $argv 0]
 set NS_TOKEN [lindex $argv 1]
 set NS_SECRET [lindex $argv 2]
 
-exp_internal 0
+exp_internal 0 # turn this on to debug expect matching attempts
 set timeout 2000
 
 spawn  suitecloud account:setup

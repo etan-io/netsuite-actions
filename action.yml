@@ -38,15 +38,18 @@ runs:
       run: echo '### SDF installed'.
       shell: bash
 
-    - name: Install Expect
-      run: sudo apt-get install -y expect tcl-expect
-      shell: bash
-    - id: after-expect-install
-      run: echo '### Expect installed'.
-      shell: bash
+    # - name: Install Expect
+    #   run: sudo apt-get install -y expect tcl-expect
+    #   shell: bash
+    # - id: after-expect-install
+    #   run: echo '### Expect installed'.
+    #   shell: bash
 
-    - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }} ${{ inputs.title }}
-      shell: bash
+    # - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }} ${{ inputs.title }}
+    #   shell: bash
+
+    - name: Setup Account
+      run: suitecloud account:savetoken -account ${{ inputs.account }} -authid ${{ inputs.title }} -tokenid ${{ inputs.token }} -tokensecret ${{ inputs.secret }}
 
     - run: cat deploy.xml
       shell: bash

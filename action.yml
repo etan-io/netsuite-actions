@@ -36,10 +36,10 @@ runs:
 
 
     - name: SuiteCloud API Install
-      run: npm install -g @oracle/suitecloud-cli
+      run: sudo npm install -g @oracle/suitecloud-cli
       shell: bash
     - id: after-sdf-install
-      run: echo '### NPM installed'.
+      run: echo '### SDF installed'.
       shell: bash
 
     - name: Install Expect

@@ -13,7 +13,7 @@ runs:
   using: "composite"
   steps:
     - id: begin-echo
-      run: echo Hello ${{ inputs.account}}.
+      run: echo Setting up NS \# ${{ inputs.account}}.
       shell: bash
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"

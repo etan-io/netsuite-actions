@@ -1,5 +1,5 @@
 name: 'NetSuite:SDF'
-description: 'Greet someone'
+description: 'Deploy NetSuite Project'
 inputs:
   account:  # id of input
     description: 'Your NetSuite Account Id'
@@ -49,7 +49,7 @@ runs:
     #   shell: bash
 
     - name: Setup Account
-      run: suitecloud account:savetoken -account ${{ inputs.account }} -authid ${{ inputs.title }} -tokenid ${{ inputs.token }} -tokensecret ${{ inputs.secret }}
+      run: suitecloud account:ci -savetoken -account ${{ inputs.account }} -authid ${{ inputs.title }} -tokenid ${{ inputs.token }} -tokensecret ${{ inputs.secret }}
       shell: bash
 
     - run: cat deploy.xml

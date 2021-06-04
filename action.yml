@@ -17,7 +17,7 @@ inputs:
     description: 'Connection Name'
     required: false
     default: "NS-Auth-$(echo $RANDOM)"
-  title:  # id of input
+  action:  # id of input
     description: 'Action (deploy, validate)'
     required: false
     default: ""

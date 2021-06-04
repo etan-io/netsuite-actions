@@ -35,43 +35,43 @@ runs:
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
 
-    - run:  if [ ${{ inputs.action}} -eq 0 ]; then echo 11111111111111111111111111111111111; else echo 000000000000000000000000000000000000; fi
+    - run:  if [ ${{ inputs.action}} -eq 1010 ]; then echo 11111111111111111111111111111111111; else echo 000000000000000000000000000000000000; fi
       shell: bash
 
-    - name: SuiteCloud API Install
-      run: npm install -g @oracle/suitecloud-cli
-      shell: bash
-    - id: after-sdf-install
-      run: echo '### SDF installed'.
-      shell: bash
-
-    - name: Install Expect
-      run: sudo apt-get install -y expect tcl-expect
-      shell: bash
-    - id: after-expect-install
-      run: echo '### Expect installed'.
-      shell: bash
-
-    - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }} ${{ inputs.title }}
-      shell: bash
-
-    # - name: Setup Account
-    #   run: suitecloud account:ci --savetoken --account ${{ inputs.account }} --authid ${{ inputs.title }} --tokenid ${{ inputs.token }} --tokensecret ${{ inputs.secret }}
+    # - name: SuiteCloud API Install
+    #   run: npm install -g @oracle/suitecloud-cli
+    #   shell: bash
+    # - id: after-sdf-install
+    #   run: echo '### SDF installed'.
     #   shell: bash
 
-    # - run: cat deploy.xml
+    # - name: Install Expect
+    #   run: sudo apt-get install -y expect tcl-expect
+    #   shell: bash
+    # - id: after-expect-install
+    #   run: echo '### Expect installed'.
     #   shell: bash
 
-    # - run: ls -trla
+    # - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }} ${{ inputs.title }}
     #   shell: bash
 
-    - run: echo ${{ inputs.action }}
-      shell: bash
+    # # - name: Setup Account
+    # #   run: suitecloud account:ci --savetoken --account ${{ inputs.account }} --authid ${{ inputs.title }} --tokenid ${{ inputs.token }} --tokensecret ${{ inputs.secret }}
+    # #   shell: bash
+
+    # # - run: cat deploy.xml
+    # #   shell: bash
+
+    # # - run: ls -trla
+    # #   shell: bash
+
+    # - run: echo ${{ inputs.action }}
+    #   shell: bash
 
 
 
-    - run: suitecloud project:validate
-      shell: bash
+    # - run: suitecloud project:validate
+    #   shell: bash
 
-    - run: suitecloud project:deploy
-      shell: bash
+    # - run: suitecloud project:deploy
+    #   shell: bash

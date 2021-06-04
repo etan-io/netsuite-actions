@@ -20,7 +20,7 @@ inputs:
   action:  # id of input
     description: 'Action (deploy, validate)'
     required: false
-    default: "both"
+    default: ""
 outputs:
   random-number:
     description: "Random number"
@@ -58,12 +58,12 @@ runs:
 
     # - run: suitecloud project:validate
     #   shell: bash
-    - run:  if [ ${{ inputs.action}} == 'validate' ]; then suitecloud project:validate; echo validating; else echo skipping validate; fi
+    - run:  if [ ${{ inputs.action}} == 'validate' ]; then suitecloud project:validate; echo validating;  fi
       shell: bash
 
 
     # - run: suitecloud project:deploy
     #   shell: bash
-    - run:  if [ ${{ inputs.action}} == 'deploy' ]; then suitecloud project:deploy; echo deploying; else echo skipping deploy; fi
+    - run:  if [ ${{ inputs.action}} == 'deploy' ]; then suitecloud project:deploy; echo deploying;  fi
       shell: bash
 

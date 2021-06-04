@@ -48,6 +48,11 @@ runs:
     - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }} ${{ inputs.title }}
       shell: bash
 
+    - run: pwd
+      shell: bash
+
+    - run: ls -trla
+      shell: bash
 
     - run: suitecloud project:deploy
       shell: bash

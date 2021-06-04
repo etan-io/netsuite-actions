@@ -46,12 +46,7 @@ runs:
       run: sudo apt-get install -y expect tcl-expect
       shell: bash
     - id: after-expect-install
-      run: echo '### Express installed'.
-      shell: bash
-
-
-    - id: after-node-suitecloud
-      run: echo '###  SDF installed'.
+      run: echo '### Expect installed'.
       shell: bash
 
     - run: expect ${{ github.action_path }}/account-setup.exp

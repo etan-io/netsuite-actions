@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
 
 exp_internal 1
-
+log_user 0
 set timeout 2000
 
 spawn  suitecloud account:setup

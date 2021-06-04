@@ -1,5 +1,9 @@
 #!/usr/bin/expect -f
 
+set NS_ACCOUNT [lindex $argv 0]
+set NS_TOKEN [lindex $argv 1]
+set NS_SECRET [lindex $argv 2]
+
 exp_internal 1
 log_user 0
 set timeout 2000
@@ -20,15 +24,15 @@ send -- "\r\n"
 
 
 expect "*Enter the account ID:*"
-send -- "12345"
+send -- "$NS_ACCOUNT"
 send -- "\r\n"
 
 expect "*Enter the Token ID:*"
-send -- "1234567890"
+send -- "$NS_TOKEN"
 send -- "\r\n"
 
 expect "*Enter the Token Secret:*"
-send -- "1234567890"
+send -- "$NS_SECRET"
 send -- "\r\n"
 
 #interact

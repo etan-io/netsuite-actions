@@ -19,22 +19,6 @@ runs:
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
 
-
-    # - name: Install Node JS
-    #   run: sudo apt install nodejs
-    #   shell: bash
-    # - id: after-node-install
-    #   run: echo '### Node installed'.
-    #   shell: bash
-
-    # - name: Install Node JS
-    #   run: sudo apt install npm
-    #   shell: bash
-    # - id: after-npm-install
-    #   run: echo '### NPM installed'.
-    #   shell: bash
-
-
     - name: SuiteCloud API Install
       run: npm install -g @oracle/suitecloud-cli
       shell: bash
@@ -49,5 +33,5 @@ runs:
       run: echo '### Expect installed'.
       shell: bash
 
-    - run: expect ${{ github.action_path }}/account-setup.exp
+    - run: expect ${{ github.action_path }}/account-setup.exp "33333" "tokentoken" "secretsecret"
       shell: bash

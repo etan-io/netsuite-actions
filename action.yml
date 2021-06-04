@@ -17,6 +17,10 @@ inputs:
     description: 'Connection Name'
     required: false
     default: "NS-Auth-$(echo $RANDOM)"
+  title:  # id of input
+    description: 'Action (deploy, validate)'
+    required: false
+    default: ""
 outputs:
   random-number:
     description: "Random number"
@@ -58,5 +62,10 @@ runs:
     # - run: ls -trla
     #   shell: bash
 
+    - run: suitecloud project:validate
+      if: (!input.action || input.action == 'validate')
+      shell: bash
+
     - run: suitecloud project:deploy
+      if: (!input.action || input.action == 'deploy')
       shell: bash

@@ -13,7 +13,7 @@ inputs:
     description: 'Token Secret for authentication'
     required: true
     default: 'World'
-  secret:  # id of input
+  title:  # id of input
     description: 'Connection Name'
     required: false
     default: "NS-Auth-$(echo $RANDOM)"
@@ -45,5 +45,5 @@ runs:
       run: echo '### Expect installed'.
       shell: bash
 
-    - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }}
+    - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }} ${{ inputs.title }}
       shell: bash

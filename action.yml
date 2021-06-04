@@ -1,8 +1,16 @@
 name: 'NetSuite:SDF'
 description: 'Greet someone'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  account:  # id of input
+    description: 'Your NetSuite Account Id'
+    required: true
+    default: 'World'
+  token:  # id of input
+    description: 'Token ID for authentication'
+    required: true
+    default: 'World'
+  secret:  # id of input
+    description: 'Token Secret for authentication'
     required: true
     default: 'World'
 outputs:

@@ -58,12 +58,12 @@ runs:
 
     # - run: suitecloud project:validate
     #   shell: bash
-    - run:  if [ ${{ inputs.action}} == 'validate' ]; then suitecloud project:validate; echo validating;  fi
+    - run:  if [ ${{ inputs.action}} == 'validate' ]; then suitecloud project:validate; echo validated;  fi
       shell: bash
 
 
     # - run: suitecloud project:deploy
     #   shell: bash
-    - run:  if [ ${{ inputs.action}} == 'deploy' ]; then suitecloud project:deploy; echo deploying;  fi
+    - run:  if [ ${{ inputs.action}} == 'deploy' ]; then suitecloud project:deploy; echo deployed;  fi
       shell: bash
 

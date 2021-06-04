@@ -35,7 +35,7 @@ runs:
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
 
-    - run:  if [ ${{ inputs.action}} -eq 1010 ]; then echo 11111111111111111111111111111111111; else echo 000000000000000000000000000000000000; fi
+    - run:  if [ ${{ inputs.action}} == '1010' ]; then echo 11111111111111111111111111111111111; else echo 000000000000000000000000000000000000; fi
       shell: bash
 
     # - name: SuiteCloud API Install

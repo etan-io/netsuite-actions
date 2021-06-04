@@ -62,7 +62,7 @@ runs:
     # - run: ls -trla
     #   shell: bash
 
-    - run: echo inputs.action
+    - run: echo ${{ inputs.account }}
       shell: bash
 
     - run: suitecloud project:validate

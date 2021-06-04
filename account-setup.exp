@@ -5,7 +5,6 @@ set NS_TOKEN [lindex $argv 1]
 set NS_SECRET [lindex $argv 2]
 
 exp_internal 1
-log_user 0
 set timeout 2000
 
 spawn  suitecloud account:setup
@@ -13,20 +12,24 @@ spawn  suitecloud account:setup
 # expect "*Create a new authentication ID (authID).*"
 # send -- "\r\n"
 
+log_user 0
 expect "*Browser-based authentication*"
 send -- "\[B"
 send -- "\r\n"
 
 
+log_user 0
 expect "*Enter an authentication ID (authID):*"
 send -- "FekadTest"
 send -- "\r\n"
 
 
+log_user 0
 expect "*Enter the account ID:*"
 send -- "$NS_ACCOUNT"
 send -- "\r\n"
 
+log_user 0
 expect "*Enter the Token ID:*"
 send -- "$NS_TOKEN"
 send -- "\r\n"

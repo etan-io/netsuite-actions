@@ -48,7 +48,7 @@ runs:
     - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }} ${{ inputs.title }}
       shell: bash
 
-    - run: pwd
+    - run: cat deploy.xml
       shell: bash
 
     - run: ls -trla

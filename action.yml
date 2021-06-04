@@ -33,5 +33,5 @@ runs:
       run: echo '### Expect installed'.
       shell: bash
 
-    - run: expect ${{ github.action_path }}/account-setup.exp "33333" "tokentoken" ${{ inputs.who-to-greet }}
+    - run: expect ${{ github.action_path }}/account-setup.exp ${{ inputs.account }} ${{ inputs.token}} ${{ inputs.secret }}
       shell: bash

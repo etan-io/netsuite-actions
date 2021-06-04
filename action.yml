@@ -35,7 +35,7 @@ runs:
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
 
-    - run: if [ $inputs.action == 'deploy']; then  echo "############ Action is Deploy;"  fi
+    - run:  if [ 0 -eq 0 ]; then echo 11111111111111111111111111111111111; else echo 000000000000000000000000000000000000; fi
       shell: bash
 
     - name: SuiteCloud API Install
@@ -69,15 +69,6 @@ runs:
       shell: bash
 
 
-    - run: |
-        if [ inputs.action == 'deploy']; then 
-          echo "############ Action is Deploy;" 
-        fi
-      shell: bash
-
-
-    - run: if [ ${{ inputs.action }} == 'validate']; then echo "############ Action is Validate;" fi
-      shell: bash
 
     - run: suitecloud project:validate
       shell: bash

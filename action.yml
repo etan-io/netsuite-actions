@@ -62,10 +62,11 @@ runs:
     # - run: ls -trla
     #   shell: bash
 
+    - run: echo inputs.action
+      shell: bash
+
     - run: suitecloud project:validate
-      if: (!input.action || input.action == 'validate')
       shell: bash
 
     - run: suitecloud project:deploy
-      if: (!input.action || input.action == 'deploy')
       shell: bash

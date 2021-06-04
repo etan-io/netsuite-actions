@@ -35,6 +35,13 @@ runs:
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
 
+    - run: |
+        if [ inputs.action == 'deploy']; then 
+          echo "############ Action is Deploy;" 
+        fi
+      shell: bash
+
+      
     - name: SuiteCloud API Install
       run: npm install -g @oracle/suitecloud-cli
       shell: bash
@@ -67,8 +74,8 @@ runs:
 
 
     - run: |
-        if [ ${{ inputs.action }} == 'deploy']; 
-          then echo "############ Action is Deploy;" 
+        if [ inputs.action == 'deploy']; then 
+          echo "############ Action is Deploy;" 
         fi
       shell: bash
 

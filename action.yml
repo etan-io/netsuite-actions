@@ -50,6 +50,7 @@ runs:
 
     - name: Setup Account
       run: suitecloud account:savetoken -account ${{ inputs.account }} -authid ${{ inputs.title }} -tokenid ${{ inputs.token }} -tokensecret ${{ inputs.secret }}
+      shell: bash
 
     - run: cat deploy.xml
       shell: bash
